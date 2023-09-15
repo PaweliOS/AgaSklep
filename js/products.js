@@ -2,6 +2,47 @@ const products = [
     {
         id: 0,
         name: "koszula classic",
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
-    }
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing.',
+        category: 'shirt',
+        images: './img/n1.jpg',
+        availableAmount: 100,
+        discount: 0,
+    },
+    {
+        id: 1,
+        name: "koszula travel",
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing 1.',
+        category: 'shirt',
+        images: './img/n3.jpg',
+        availableAmount: 101,
+        discount: 0,
+    },
+    {
+        id: 2,
+        name: "koszula simple",
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing 2.',
+        category: 'shirt',
+        images: './img/n4.jpg',
+        availableAmount: 103,
+        discount: 20,
+    },
+    {
+        id: 3,
+        name: "podkoszulek freedom",
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing 2.',
+        category: 'tshirt',
+        images: './img/n5.jpg',
+        availableAmount: 104,
+        discount: 15,
+    },
+    {
+        id: 4,
+        name: "podkoszulek elegance",
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing 2.',
+        category: 'tshirt',
+        images: './img/n6.jpg',
+        availableAmount: 106,
+        discount: 50,
+    },
+
 ]
