@@ -38,4 +38,7 @@ body {
 }
 .main__shop-board {
   background-color: #ffffff;
+}
+.main__shop-board-cards {
+  width: 18rem;
 }/*# sourceMappingURL=style.css.map */
