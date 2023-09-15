@@ -40,11 +40,11 @@ body {
 
 .main {
     &__section-one {
-        height: 400px;
+        // height: 400px;
         background-color: $bgSectionOneColor;
     }
-    &__main__section-one-row {
-        
+    &__news-box {
+        background-color: $newsBoxBackgroundColor;
     }
 }
 
@@ -52,24 +52,24 @@ body {
 //     height: 400px;
 // }
 
-@media (min-width: 576px) {
-    .main {
-        &__section-one {
-            height: 450px;
-        }
-    }
-}
-@media (min-width: 768px) {
-    .main {
-        &__section-one {
-            height: 600px;
-        }
-    }
-}
-@media (min-width: 992px) {
-    .main {
-        &__section-one {
-            height: 750px;
-        }
-    }
-}
+// @media (min-width: 576px) {
+//     .main {
+//         &__section-one {
+//             height: 450px;
+//         }
+//     }
+// }
+// @media (min-width: 768px) {
+//     .main {
+//         &__section-one {
+//             height: 600px;
+//         }
+//     }
+// }
+// @media (min-width: 992px) {
+//     .main {
+//         &__section-one {
+//             height: 750px;
+//         }
+//     }
+// }

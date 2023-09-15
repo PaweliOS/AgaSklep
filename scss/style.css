@@ -31,21 +31,8 @@ body {
 }
 
 .main__section-one {
-  height: 400px;
   background-color: #faf6f2;
 }
-@media (min-width: 576px) {
-  .main__section-one {
-    height: 450px;
-  }
-}
-@media (min-width: 768px) {
-  .main__section-one {
-    height: 600px;
-  }
-}
-@media (min-width: 992px) {
-  .main__section-one {
-    height: 750px;
-  }
+.main__news-box {
+  background-color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
