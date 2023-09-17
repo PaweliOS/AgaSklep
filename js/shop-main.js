@@ -18,12 +18,10 @@ const renderProducts = (items) => {
                                 </div>
                                 <a href="./shop.html" class="btn btn-primary mx-auto">do koszyka</a>        
                             </div>                            
-                        </div>`
-        
+                        </div>`        
         mainShopBoard.appendChild(newProduct);
     }
 }
-
 
 document.onload = renderProducts(actualProducts);
 
@@ -35,6 +33,8 @@ searchBarInput.addEventListener('input', (e) => {
             return product
         };
     });
-    console.log(foundThing);
+
+
+    mainShopBoard.innerHTML = '';
     renderProducts(foundThing);
 });
