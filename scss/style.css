@@ -29,6 +29,16 @@ body {
 .header__intro-text {
   right: 0;
 }
+.header__cart-remove-btn {
+  display: none;
+}
+.header__cart-remove-btn--active {
+  display: block;
+}
+.header__cart-remove-btn:hover {
+  background-color: black;
+  color: white;
+}
 
 .main__section-one {
   background-color: #faf6f2;

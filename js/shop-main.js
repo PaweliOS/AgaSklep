@@ -2,6 +2,7 @@ const actualProducts = products;
 const mainShopBoard = document.querySelector('.main__shop-board');
 const searchBarInput = document.querySelector('.header__navbar-searchbar-input');
 const basketLabel = document.querySelector('.header__cart-label')
+const basketRemoveButton = document.querySelector('.header__cart-remove-btn');
 let basket = [];
 
 const renderProducts = (items) => {
@@ -56,10 +57,20 @@ const addToBasket = (e) => {
         return (sum += thing.price);
     }, 0);
     basketLabel.textContent = sumupBasket.toFixed(2);
+    sumupBasket > 0 ? basketRemoveButton.classList.add('header__cart-remove-btn--active') : basketRemoveButton.classList.remove('header__cart-remove-btn--active')
 };
 
 toBasketButtons.forEach((btn) => {
     btn.addEventListener('click', addToBasket);
 });
+
+
+const removeFromBasket = () => {
+    basket = [];
+    basketLabel.textContent = '0.00';
+}
+    
+
+basketRemoveButton.addEventListener('click', removeFromBasket);
 
 

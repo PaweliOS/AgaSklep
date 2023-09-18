@@ -37,6 +37,17 @@ body {
         
         right: 0;
     }
+    &__cart-remove-btn {
+        display: none;
+    }
+    &__cart-remove-btn--active {
+        display: block;
+    }
+
+    &__cart-remove-btn:hover {
+        background-color: black;
+        color: white;
+    }
 }
 
 .main {
