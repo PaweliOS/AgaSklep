@@ -57,7 +57,7 @@ const addToBasket = (e) => {
         return (sum += thing.price);
     }, 0);
     basketLabel.textContent = sumupBasket.toFixed(2);
-    sumupBasket > 0 ? basketRemoveButton.classList.add('header__cart-remove-btn--active') : basketRemoveButton.classList.remove('header__cart-remove-btn--active')
+    sumupBasket > 0 ? basketRemoveButton.classList.add('header__cart-remove-btn--active') : basketRemoveButton.classList.remove('header__cart-remove-btn--active');
 };
 
 toBasketButtons.forEach((btn) => {
@@ -67,6 +67,7 @@ toBasketButtons.forEach((btn) => {
 
 const removeFromBasket = () => {
     basket = [];
+    basketRemoveButton.classList.remove('header__cart-remove-btn--active');
     basketLabel.textContent = '0.00';
 }
     
