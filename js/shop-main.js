@@ -1,6 +1,8 @@
 const actualProducts = products;
 const mainShopBoard = document.querySelector('.main__shop-board');
 const searchBarInput = document.querySelector('.header__navbar-searchbar-input');
+const basketLabel = document.querySelector('.header__cart-label')
+let basket = [];
 
 const renderProducts = (items) => {
     for (let i = 0; i < items.length; i++) {
@@ -16,7 +18,7 @@ const renderProducts = (items) => {
                                     <p class="me-2 mb-0" for="">${items[i].price.toFixed(2)}</p>
                                     <p class="mb-0" for="">zł</p>
                                 </div>
-                                <a href="./shop.html" class="btn btn-primary mx-auto">do koszyka</a>        
+                                <a data-id="${items[i].id}" href="#" class="btn btn-primary main__shop-board-card-toBasketButton mx-auto">do koszyka</a>        
                             </div>                            
                         </div>`        
         mainShopBoard.appendChild(newProduct);
@@ -38,3 +40,26 @@ searchBarInput.addEventListener('input', (e) => {
     mainShopBoard.innerHTML = '';
     renderProducts(foundThing);
 });
+
+
+const toBasketButtons = document.querySelectorAll('.main__shop-board-card-toBasketButton');
+
+
+
+const addToBasket = (e) => {
+    const selectedId = parseInt(e.target.dataset.id);
+    const key = actualProducts.findIndex((product) => product.id === selectedId);
+    // console.log(key)
+    // console.log(actualProducts.at(key))
+    basket.push(actualProducts.at(key));
+    const sumupBasket = basket.reduce((sum, thing) => {
+        return (sum += thing.price);
+    }, 0);
+    basketLabel.textContent = sumupBasket.toFixed(2);
+};
+
+toBasketButtons.forEach((btn) => {
+    btn.addEventListener('click', addToBasket);
+});
+
+
